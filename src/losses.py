@@ -1,0 +1,6 @@
+import numpy as np
+
+def cross_entropy(y_true, y_pred):
+    m = y_true.shape[0]
+    loss = -np.sum(y_true * np.log(y_pred + 1e-15)) / m
+    return loss
